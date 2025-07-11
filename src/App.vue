@@ -5,7 +5,9 @@ import HelloWorld from './components/HelloWorld.vue'
 const num = 12
   + 3
   / 2
+const foo = 1
 console.log(num)
+console.log(foo)
 </script>
 
 <template>
