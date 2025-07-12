@@ -1,4 +1,3 @@
-// /** @type {import('cz-git').UserConfig} */
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -6,7 +5,6 @@ import { fileURLToPath } from 'node:url'
 // 在 ESM 中，__dirname 不存在，需要用这种标准方式来获取当前文件所在目录
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-/* 获取项目的修改范围 */
 const scopes = fs
   .readdirSync(path.resolve(__dirname, 'src'), { withFileTypes: true })
   .filter(dirent => dirent.isDirectory())
@@ -15,6 +13,7 @@ const scopes = fs
 export default {
   // 继承的规则
   extends: ['@commitlint/config-conventional'],
+
   // 自定义规则
   // @see https://commitlint.js.org/#/reference-rules
   rules: {
