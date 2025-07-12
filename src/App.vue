@@ -6,8 +6,9 @@ const num = 12
   + 3
   / 2
 const foo = 1
-console.log(num)
+// console.log(num)
 console.log(foo)
+console.log(`this is a foo sentence`)
 </script>
 
 <template>
